@@ -99,7 +99,7 @@ public class GenerateSwaggerJsonMojo extends AbstractMojo {
   private static final Plugin SWAGGER_PLUGIN = plugin(
     groupId("com.github.kongchen"),
     artifactId("swagger-maven-plugin"),
-    version("3.1.5"),
+    version("3.1.8"),
     Collections.emptyList()
   );
 
@@ -125,6 +125,7 @@ public class GenerateSwaggerJsonMojo extends AbstractMojo {
 
     return element("apiSource",
       element("swaggerDirectory", swaggerDirectory),
+      element("outputFormats", "json,yaml"),
       element("attachSwaggerArtifact", "true"),
       element("springmvc", "false"),
       element("schemes", "http"),
