@@ -51,14 +51,6 @@ public class MethodStep {
       ctMethod.addAnnotation(pathAnnotation);
     }
 
-    // no JAX-RS annotation found, put a GET on it
-    final Class<? extends Annotation> jaxrsAnnotationClass = TypeHelper.javaxRsAnnotation(ctMethod);
-    if (jaxrsAnnotationClass == null) {
-      final CtAnnotation<?> jaxRsAnnotation = codeFactory.createAnnotation(codeFactory.createCtTypeReference(GET.class));
-      ctMethod.addAnnotation(jaxRsAnnotation);
-    }
-
-
     final String description;
 
     if (restService != null) {
