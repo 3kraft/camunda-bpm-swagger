@@ -73,6 +73,7 @@ public class GenerateSwaggerJsonMojo extends AbstractMojo {
     "org.camunda.bpm.engine.rest.TenantRestService",
     "org.camunda.bpm.engine.rest.UserRestService",
     "org.camunda.bpm.engine.rest.VariableInstanceRestService",
+    "org.camunda.bpm.engine.rest.history.HistoryRestService"
   };
 
   @Parameter(property = "camunda.version", required = true)
